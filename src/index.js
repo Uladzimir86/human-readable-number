@@ -13,12 +13,12 @@ module.exports = function toReadable (number) {
 
     sot = function(x) {
         if (x == null) return '';
-        return arrEd[+x]+' '+'hundred';
+        return arrEd[+x]+' '+'hundred ';
     }
     des = function(y) {
       if (y == "0") return '';
       if (y == '1') return arrEd[+('1'+arrNumber[0])];
-        return arrDes[+y];
+        return arrDes[+y]+" ";
     }
     ed = function(z) {
         if (z == "0") return '';
@@ -26,9 +26,9 @@ module.exports = function toReadable (number) {
     }
 
 
-    if(arrNumber.length == 3 && arrNumber[1] == '1') return sot(arrNumber[2]) + ' ' + des(arrNumber[1])
+    if(arrNumber.length == 3 && arrNumber[1] == '1') return sot(arrNumber[2]) + des(arrNumber[1])
 
-    else return sot(arrNumber[2]) + ' ' + des(arrNumber[1]) + ' ' + ed(arrNumber[0]);
+    else return sot(arrNumber[2]) + des(arrNumber[1]) + ed(arrNumber[0]);
     
 
 }
