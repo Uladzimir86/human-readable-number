@@ -28,7 +28,7 @@ module.exports = function toReadable (number) {
 
     if(arrNumber.length == 3 && arrNumber[1] == '1') return sot(arrNumber[2]) + des(arrNumber[1])
 
-    else return sot(arrNumber[2]) + des(arrNumber[1]) + ed(arrNumber[0]);
+    else return (sot(arrNumber[2]) + des(arrNumber[1]) + ed(arrNumber[0])).trim();
     
 
 }
